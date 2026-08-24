@@ -55,6 +55,7 @@ mensagem_original = "AO QUE TUDO INDICA"
 chave_secreta = 3
 
 print("=== ETAPA 1: CIFRAÇÃO ===")
+print("Teste 1")
 print(f"Texto original: '{mensagem_original}'")
 print(f"Aplicando algoritmo de César com chave {chave_secreta}")
 texto_cifrado = cesar(mensagem_original, chave_secreta)
@@ -69,6 +70,10 @@ print(f"Resultado: '{texto_recuperado}'\n")
 print("=== ETAPA 3: ATAQUE DE BUSCA EXAUSTIVA ===")
 print(f"Texto cifrado: '{texto_cifrado}'")
 melhores = candidatas(texto_cifrado)
+print("Exemplo de falha:")
+texto_falho = "O REI"
+print(f"Texto cifrado: '{texto_falho}'")
+melhores = candidatas(texto_falho)
 
 print("\n=== RESULTADO FINAL DO ATAQUE ===")
 print("O algoritmo estatístico ordenou as opções e sugere:")
